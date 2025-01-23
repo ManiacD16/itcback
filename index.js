@@ -18,11 +18,11 @@ app.use("/qr-codes", express.static("public/qr-codes"));
 app.use("/api/users", userRoutes);
 
 // Export the app as a serverless function
-// module.exports = (req, res) => {
-//   app(req, res); // Forward the request to the express app
-// };
+module.exports = (req, res) => {
+  app(req, res); // Forward the request to the express app
+};
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
-);
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () =>
+//   console.log(`Server running on http://localhost:${PORT}`)
+// );

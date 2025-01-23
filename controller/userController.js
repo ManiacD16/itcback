@@ -13,19 +13,20 @@ const CONTRACT_ABI = require("../config/contractABI.json");
 const web3 = new Web3(new Web3.providers.HttpProvider(INFURA_API_URL));
 const contract = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
 
-
 // Register user
 const registerUser = async (req, res) => {
   const { address } = req.body;
 
   try {
-    if (!ethers.utils.isAddress(address)) {
-      return res.status(400).json({ error: "Invalid Ethereum address" });
-    }
+    // if (!ethers.utils.isAddress(address)) {
+    //   return res.status(400).json({ error: "Invalid Ethereum address" });
+    // }
 
     const isRegistered = await contract.methods.users(address).call();
     if (!isRegistered.isActive) {
-      return res.status(400).json({ error: "User not registered in the smart contract" });
+      return res
+        .status(400)
+        .json({ error: "User not registered in the smart contract" });
     }
 
     // Check if user already exists
@@ -39,10 +40,17 @@ const registerUser = async (req, res) => {
     const qrCodePath = await generateQRCode(address);
 
     // Save user to database
-    const user = new User({ address, nickname, avatar: avatarUrl, referralQR: qrCodePath });
+    const user = new User({
+      address,
+      nickname,
+      avatar: avatarUrl,
+      referralQR: qrCodePath,
+    });
     await user.save();
 
-    return res.status(200).json({ message: "User registered successfully", data: user });
+    return res
+      .status(200)
+      .json({ message: "User registered successfully", data: user });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Error registering user" });
@@ -64,7 +72,9 @@ const updateUser = async (req, res) => {
 
     await user.save();
 
-    return res.status(200).json({ message: "User updated successfully", data: user });
+    return res
+      .status(200)
+      .json({ message: "User updated successfully", data: user });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Error updating user" });
@@ -89,7 +99,9 @@ const getUserByAddress = async (req, res) => {
       return res.status(404).json({ error: "User not found" });
     }
 
-    return res.status(200).json({ message: "User fetched successfully", data: user });
+    return res
+      .status(200)
+      .json({ message: "User fetched successfully", data: user });
   } catch (error) {
     console.error("🚀 ~ Error:", error);
     return res.status(500).json({ error: "Error fetching user data" });
@@ -97,5 +109,3 @@ const getUserByAddress = async (req, res) => {
 };
 
 module.exports = { registerUser, updateUser, getUserByAddress };
-
-
