@@ -17,6 +17,7 @@ app.use("/qr-codes", express.static("qr-codes"));
 // API Routes
 app.use("/api/users", userRoutes);
 
-// Start server
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// Export the app as a serverless function
+module.exports = (req, res) => {
+  app(req, res); // Forward the request to the express app
+};
