@@ -21,3 +21,8 @@ app.use("/api/users", userRoutes);
 module.exports = (req, res) => {
   app(req, res); // Forward the request to the express app
 };
+
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () =>
+//   console.log(`Server running on http://localhost:${PORT}`)
+// );
