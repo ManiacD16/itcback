@@ -12,7 +12,7 @@ app.use(express.json());
 connectDB();
 
 // Serve static files
-app.use("/qr-codes", express.static("qr-codes"));
+app.use("/qr-codes", express.static("public/qr-codes"));
 
 // API Routes
 app.use("/api/users", userRoutes);
