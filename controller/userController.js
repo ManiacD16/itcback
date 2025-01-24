@@ -18,9 +18,9 @@ const registerUser = async (req, res) => {
   const { address } = req.body;
 
   try {
-    // if (!ethers.utils.isAddress(address)) {
-    //   return res.status(400).json({ error: "Invalid Ethereum address" });
-    // }
+    if (!ethers.utils.isAddress(address)) {
+      return res.status(400).json({ error: "Invalid Ethereum address" });
+    }
 
     const isRegistered = await contract.methods.users(address).call();
     if (!isRegistered.isActive) {
