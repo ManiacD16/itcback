@@ -28,7 +28,7 @@ const generateQRCode = async (address) => {
   try {
     // Generate QR code as buffer
     const qrBuffer = await qrCode.toBuffer(
-      `https://itc.trademarketcap.ai/${address}`
+      `https://itc.trademarketcap.ai/#/register?referral=${address}`
     );
 
     // Upload to Cloudinary
