@@ -1,74 +1,216 @@
 [
   {
     "inputs": [
-      { "internalType": "address", "name": "_itcToken", "type": "address" },
-      { "internalType": "address", "name": "_adminWallet", "type": "address" },
       {
         "internalType": "address",
-        "name": "_operatorAddress",
+        "name": "target",
         "type": "address"
-      },
-      { "internalType": "address", "name": "_initialOwner", "type": "address" },
-      {
-        "internalType": "address",
-        "name": "_automationAddress",
-        "type": "address"
-      },
-      { "internalType": "address", "name": "_poolAddress", "type": "address" }
+      }
     ],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
+    "name": "AddressEmptyCode",
+    "type": "error"
   },
-  { "inputs": [], "name": "AlreadyRegistered", "type": "error" },
-  { "inputs": [], "name": "CannotReferSelf", "type": "error" },
-  { "inputs": [], "name": "ERR_RankExpired", "type": "error" },
-  { "inputs": [], "name": "ITC_AutomationAdd", "type": "error" },
-  { "inputs": [], "name": "ITC_OnlyAdmin", "type": "error" },
-  { "inputs": [], "name": "InsufficientAllowance", "type": "error" },
+  {
+    "inputs": [],
+    "name": "AlreadyRegistered",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "CannotReferSelf",
+    "type": "error"
+  },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "provided", "type": "uint256" },
-      { "internalType": "uint256", "name": "required", "type": "uint256" }
+      {
+        "internalType": "address",
+        "name": "implementation",
+        "type": "address"
+      }
+    ],
+    "name": "ERC1967InvalidImplementation",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC1967NonPayable",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERR_RankExpired",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "FailedCall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ITC_AutomationAdd",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ITC_OnlyARBAdmin",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InsufficientAllowance",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "provided",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "required",
+        "type": "uint256"
+      }
     ],
     "name": "InsufficientBalance",
     "type": "error"
   },
   {
     "inputs": [
-      { "internalType": "string", "name": "paramName", "type": "string" }
+      {
+        "internalType": "string",
+        "name": "paramName",
+        "type": "string"
+      }
     ],
     "name": "InvalidAddress",
     "type": "error"
   },
-  { "inputs": [], "name": "InvalidDistribution", "type": "error" },
-  { "inputs": [], "name": "InvalidRank", "type": "error" },
-  { "inputs": [], "name": "InvalidReferrer", "type": "error" },
-  { "inputs": [], "name": "InvalidUpgrade", "type": "error" },
-  { "inputs": [], "name": "NoRabShareAvailable", "type": "error" },
-  { "inputs": [], "name": "NotEligibleForRab", "type": "error" },
-  { "inputs": [], "name": "NothingToClaim", "type": "error" },
-  { "inputs": [], "name": "OperatorCannotRegister", "type": "error" },
+  {
+    "inputs": [],
+    "name": "InvalidDistribution",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidInitialization",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidRank",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidReferrer",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidUpgrade",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NoRabShareAvailable",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NotEligibleForRab",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NotInitializing",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NothingToClaim",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OperatorCannotRegister",
+    "type": "error"
+  },
   {
     "inputs": [
-      { "internalType": "address", "name": "owner", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
     ],
     "name": "OwnableInvalidOwner",
     "type": "error"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "account", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
     ],
     "name": "OwnableUnauthorizedAccount",
     "type": "error"
   },
-  { "inputs": [], "name": "ReentrancyGuardReentrantCall", "type": "error" },
-  { "inputs": [], "name": "TranAdmnfld", "type": "error" },
-  { "inputs": [], "name": "TranfldLTG", "type": "error" },
-  { "inputs": [], "name": "TransferFailed", "type": "error" },
-  { "inputs": [], "name": "TrnConFld", "type": "error" },
-  { "inputs": [], "name": "UserNotActive", "type": "error" },
-  { "inputs": [], "name": "WithdrawalFailed", "type": "error" },
+  {
+    "inputs": [],
+    "name": "ReentrancyGuardReentrantCall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TranAdmnfld",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TranfldLTG",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TransferFailed",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TrnConFld",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "UUPSUnauthorizedCallContext",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "slot",
+        "type": "bytes32"
+      }
+    ],
+    "name": "UUPSUnsupportedProxiableUUID",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "UserNotActive",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "WithdrawalFailed",
+    "type": "error"
+  },
   {
     "anonymous": false,
     "inputs": [
@@ -86,6 +228,19 @@
       }
     ],
     "name": "ArbPoolUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "version",
+        "type": "uint64"
+      }
+    ],
+    "name": "Initialized",
     "type": "event"
   },
   {
@@ -212,7 +367,7 @@
       },
       {
         "indexed": false,
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       },
@@ -231,7 +386,7 @@
     "inputs": [
       {
         "indexed": true,
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       },
@@ -262,7 +417,7 @@
       },
       {
         "indexed": false,
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       },
@@ -293,7 +448,7 @@
       },
       {
         "indexed": false,
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       },
@@ -318,7 +473,7 @@
     "inputs": [
       {
         "indexed": false,
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       },
@@ -355,7 +510,7 @@
       },
       {
         "indexed": false,
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       },
@@ -442,7 +597,7 @@
       },
       {
         "indexed": false,
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       },
@@ -500,51 +655,119 @@
     "type": "event"
   },
   {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "implementation",
+        "type": "address"
+      }
+    ],
+    "name": "Upgraded",
+    "type": "event"
+  },
+  {
     "inputs": [],
     "name": "ADMIN_FEE",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "MONTH_DURATION",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "RANK_VALIDITY",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "UPGRADE_INTERFACE_VERSION",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "WITHDRAWAL_FEE",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "ZERO_ADDRESS",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
-    "name": "adminWallet",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "arbAdminWallet",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "arbPool",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -558,28 +781,46 @@
   {
     "inputs": [],
     "name": "automationAddress",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "_currentRank",
         "type": "uint8"
       },
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "_targetRank",
         "type": "uint8"
       }
     ],
     "name": "calculateUpgradeCost",
     "outputs": [
-      { "internalType": "uint256", "name": "baseCostITC", "type": "uint256" },
-      { "internalType": "uint256", "name": "AdmnFeeAmt", "type": "uint256" },
-      { "internalType": "uint256", "name": "itcPerUSDT", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "baseCostITC",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "AdmnFeeAmt",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "itcPerUSDT",
+        "type": "uint256"
+      }
     ],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -594,7 +835,26 @@
   {
     "inputs": [],
     "name": "currentMonthIndex",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "depositFeeAdminWallet",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -602,8 +862,16 @@
     "inputs": [],
     "name": "getITCTokenPrice",
     "outputs": [
-      { "internalType": "uint256", "name": "itcPerUSDT", "type": "uint256" },
-      { "internalType": "uint256", "name": "usdtPerITC", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "itcPerUSDT",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "usdtPerITC",
+        "type": "uint256"
+      }
     ],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -611,21 +879,31 @@
   {
     "inputs": [],
     "name": "getMnthlyRABPoolBalance",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "_rank",
         "type": "uint8"
       }
     ],
     "name": "getRankDetails",
     "outputs": [
-      { "internalType": "uint256", "name": "price", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "price",
+        "type": "uint256"
+      },
       {
         "internalType": "uint256",
         "name": "cumulativePrice",
@@ -637,17 +915,29 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" },
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       }
     ],
     "name": "getRankLTG",
     "outputs": [
-      { "internalType": "uint256", "name": "count", "type": "uint256" },
-      { "internalType": "uint256", "name": "pendingAmount", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "count",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "pendingAmount",
+        "type": "uint256"
+      },
       {
         "internalType": "uint256",
         "name": "ttlDstrbtdAmount",
@@ -660,115 +950,219 @@
   {
     "inputs": [
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "_rank",
         "type": "uint8"
       }
     ],
     "name": "getRankPrice",
     "outputs": [
-      { "internalType": "uint256", "name": "usdPrice", "type": "uint256" },
-      { "internalType": "uint256", "name": "itcPerUSDT", "type": "uint256" },
-      { "internalType": "uint256", "name": "baseCostITC", "type": "uint256" },
-      { "internalType": "uint256", "name": "AdmnFeeAmt", "type": "uint256" },
-      { "internalType": "uint256", "name": "TtlCstITC", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "usdPrice",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "itcPerUSDT",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "baseCostITC",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "AdmnFeeAmt",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "TtlCstITC",
+        "type": "uint256"
+      }
     ],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" },
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       }
     ],
     "name": "getRemainingPayouts",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "getTtlInvstmnt",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "getTtlLtgDstrbtd",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "getTtlRabDstrbtd",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "getTtllvlDstrbtd",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
     ],
     "name": "getUserRank",
     "outputs": [
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" }
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" },
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       }
     ],
     "name": "getUserReferralRankCount",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
     ],
     "name": "getUserReferrals",
     "outputs": [
-      { "internalType": "address[]", "name": "", "type": "address[]" }
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
     ],
     "name": "getUserTransactions",
     "outputs": [
       {
         "components": [
-          { "internalType": "address", "name": "user", "type": "address" },
-          { "internalType": "address", "name": "from", "type": "address" },
-          { "internalType": "uint256", "name": "amt", "type": "uint256" },
-          { "internalType": "uint256", "name": "ts", "type": "uint256" },
-          { "internalType": "string", "name": "tp", "type": "string" }
+          {
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "ts",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tp",
+            "type": "string"
+          }
         ],
-        "internalType": "struct ITCCommunity.Tx[]",
+        "internalType": "struct ITCCommunityUpgradeableV1.Tx[]",
         "name": "",
         "type": "tuple[]"
       }
@@ -778,78 +1172,192 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
     ],
     "name": "getUserTtlInvstmnt",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
     ],
     "name": "getUsrTtlLtgrcvd",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
     ],
     "name": "getUsrTtllvlrcvd",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
     ],
     "name": "getUsrTtlrabrcvd",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
     ],
-    "name": "getWthltgbIncm",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
     ],
     "name": "getWthlvlIncm",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
     ],
     "name": "getWthrabIncome",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" },
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "address",
+        "name": "_itcToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_depositFeeAdminWallet",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_withdrlFeeAdminWallet",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_undstrbtdLvlBalAdminWallet",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_operatorAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_initialOwner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_automationAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_arbAdminWallet",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_poolAddress",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "rank",
         "type": "uint8"
       }
     ],
     "name": "isEligibleForCurrentMonth",
-    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -857,47 +1365,107 @@
     "inputs": [],
     "name": "itcToken",
     "outputs": [
-      { "internalType": "contract IERC20", "name": "", "type": "address" }
+      {
+        "internalType": "contract IERC20",
+        "name": "",
+        "type": "address"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" }
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      }
     ],
     "name": "maxPyts",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "", "type": "uint256" },
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" },
-      { "internalType": "uint256", "name": "", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
     ],
     "name": "monthlyEligibleAddresses",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "", "type": "uint256" },
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" },
-      { "internalType": "address", "name": "", "type": "address" }
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
     ],
     "name": "monthlyEligibleUsers",
-    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "name": "monthlyRabPools",
     "outputs": [
-      { "internalType": "uint256", "name": "totalAmount", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "totalAmount",
+        "type": "uint256"
+      },
       {
         "internalType": "uint256",
         "name": "distributionTimestamp",
@@ -910,14 +1478,26 @@
   {
     "inputs": [],
     "name": "operatorAddress",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "owner",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -935,36 +1515,81 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" }
-    ],
-    "name": "rUC",
+    "inputs": [],
+    "name": "proxiableUUID",
     "outputs": [
-      { "internalType": "uint256", "name": "cnt", "type": "uint256" }
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" }
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "name": "rUC",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "cnt",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      }
     ],
     "name": "rabShrPrsntg",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "rabStartTimestamp",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "", "type": "address" },
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" }
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      }
     ],
     "name": "rankAchievements",
     "outputs": [
@@ -978,33 +1603,53 @@
         "name": "payoutsReceived",
         "type": "uint256"
       },
-      { "internalType": "bool", "name": "isEligible", "type": "bool" }
+      {
+        "internalType": "bool",
+        "name": "isEligible",
+        "type": "bool"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" }
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      }
     ],
     "name": "rankDetails",
     "outputs": [
-      { "internalType": "uint256", "name": "price", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "price",
+        "type": "uint256"
+      },
       {
         "internalType": "uint256",
         "name": "cumulativePrice",
         "type": "uint256"
       },
-      { "internalType": "uint256", "name": "ltgb", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "ltgb",
+        "type": "uint256"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_referrer", "type": "address" },
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "address",
+        "name": "_referrer",
+        "type": "address"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "_rank",
         "type": "uint8"
       }
@@ -1023,7 +1668,11 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "newOwner", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
     ],
     "name": "transferOwnership",
     "outputs": [],
@@ -1031,13 +1680,30 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "undstrbtdLvlBalAdminWallet",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "_rank",
         "type": "uint8"
       },
-      { "internalType": "uint256", "name": "_price", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "_price",
+        "type": "uint256"
+      },
       {
         "internalType": "uint256",
         "name": "_cumulativePrice",
@@ -1052,7 +1718,7 @@
   {
     "inputs": [
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "_targetRank",
         "type": "uint8"
       }
@@ -1064,31 +1730,81 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "", "type": "address" },
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" }
+      {
+        "internalType": "address",
+        "name": "newImplementation",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "upgradeToAndCall",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      }
     ],
     "name": "userRankDurations",
     "outputs": [
-      { "internalType": "uint256", "name": "startMonth", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "startMonth",
+        "type": "uint256"
+      },
       {
         "internalType": "uint256",
         "name": "remainingPayouts",
         "type": "uint256"
       },
-      { "internalType": "bool", "name": "isActive", "type": "bool" }
+      {
+        "internalType": "bool",
+        "name": "isActive",
+        "type": "bool"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "", "type": "address" },
-      { "internalType": "enum ITCCommunity.Rank", "name": "", "type": "uint8" }
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
+        "name": "",
+        "type": "uint8"
+      }
     ],
     "name": "userRankLTGBonuses",
     "outputs": [
-      { "internalType": "uint256", "name": "count", "type": "uint256" },
-      { "internalType": "uint256", "name": "pendingAmount", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "count",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "pendingAmount",
+        "type": "uint256"
+      },
       {
         "internalType": "uint256",
         "name": "ttlDstrbtdAmount",
@@ -1099,12 +1815,22 @@
     "type": "function"
   },
   {
-    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "name": "users",
     "outputs": [
-      { "internalType": "address", "name": "referrer", "type": "address" },
       {
-        "internalType": "enum ITCCommunity.Rank",
+        "internalType": "address",
+        "name": "referrer",
+        "type": "address"
+      },
+      {
+        "internalType": "enum ITCCommunityUpgradeableV1.Rank",
         "name": "currentRank",
         "type": "uint8"
       },
@@ -1123,7 +1849,11 @@
         "name": "userTotalInvestment",
         "type": "uint256"
       },
-      { "internalType": "bool", "name": "isActive", "type": "bool" },
+      {
+        "internalType": "bool",
+        "name": "isActive",
+        "type": "bool"
+      },
       {
         "components": [
           {
@@ -1134,11 +1864,6 @@
           {
             "internalType": "uint256",
             "name": "TtllvlIncmrcvd",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "WthltgbIncm",
             "type": "uint256"
           },
           {
@@ -1157,7 +1882,7 @@
             "type": "uint256"
           }
         ],
-        "internalType": "struct ITCCommunity.RwdInfo",
+        "internalType": "struct ITCCommunityUpgradeableV1.RwdInfo",
         "name": "rewards",
         "type": "tuple"
       }
@@ -1168,8 +1893,27 @@
   {
     "inputs": [],
     "name": "usrCnt",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "version",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "pure",
     "type": "function"
   },
   {
@@ -1184,6 +1928,19 @@
     "name": "withdrawLevelIncome",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "withdrlFeeAdminWallet",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   }
 ]
