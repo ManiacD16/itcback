@@ -669,7 +669,20 @@
   },
   {
     "inputs": [],
-    "name": "ADMIN_FEE",
+    "name": "AdmnWallt",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MONTH_DURATION",
     "outputs": [
       {
         "internalType": "uint256",
@@ -682,7 +695,7 @@
   },
   {
     "inputs": [],
-    "name": "MONTH_DURATION",
+    "name": "PRCHS_FEE",
     "outputs": [
       {
         "internalType": "uint256",
@@ -747,7 +760,7 @@
   },
   {
     "inputs": [],
-    "name": "arbAdminWallet",
+    "name": "arbAdmin",
     "outputs": [
       {
         "internalType": "address",
@@ -780,7 +793,7 @@
   },
   {
     "inputs": [],
-    "name": "automationAddress",
+    "name": "automationAdd",
     "outputs": [
       {
         "internalType": "address",
@@ -840,19 +853,6 @@
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "depositFeeAdminWallet",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -1293,22 +1293,17 @@
       },
       {
         "internalType": "address",
-        "name": "_depositFeeAdminWallet",
+        "name": "_AdmnWallt",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "_withdrlFeeAdminWallet",
+        "name": "_undstrbtdLvlBalAdmn",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "_undstrbtdLvlBalAdminWallet",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_operatorAddress",
+        "name": "_operatorAdd",
         "type": "address"
       },
       {
@@ -1318,17 +1313,17 @@
       },
       {
         "internalType": "address",
-        "name": "_automationAddress",
+        "name": "_automationAdd",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "_arbAdminWallet",
+        "name": "_arbAdmin",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "_poolAddress",
+        "name": "_poolAdd",
         "type": "address"
       }
     ],
@@ -1477,7 +1472,7 @@
   },
   {
     "inputs": [],
-    "name": "operatorAddress",
+    "name": "operatorAdd",
     "outputs": [
       {
         "internalType": "address",
@@ -1681,7 +1676,7 @@
   },
   {
     "inputs": [],
-    "name": "undstrbtdLvlBalAdminWallet",
+    "name": "undstrbtdLvlBalAdmn",
     "outputs": [
       {
         "internalType": "address",
@@ -1928,19 +1923,6 @@
     "name": "withdrawLevelIncome",
     "outputs": [],
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "withdrlFeeAdminWallet",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   }
 ]
