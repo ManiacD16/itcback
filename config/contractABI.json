@@ -266,12 +266,12 @@
       },
       {
         "indexed": false,
-        "internalType": "uint256",
+        "internalType": "uint8",
         "name": "level",
-        "type": "uint256"
+        "type": "uint8"
       }
     ],
-    "name": "LevelIncomeDistributed",
+    "name": "LvlIncmDstrbtd",
     "type": "event"
   },
   {
@@ -565,31 +565,6 @@
         "type": "address"
       },
       {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "rewardType",
-        "type": "string"
-      }
-    ],
-    "name": "RewardsClaimed",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      },
-      {
         "indexed": true,
         "internalType": "address",
         "name": "referrer",
@@ -698,9 +673,9 @@
     "name": "PRCHS_FEE",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "uint8",
         "name": "",
-        "type": "uint256"
+        "type": "uint8"
       }
     ],
     "stateMutability": "view",
@@ -737,9 +712,9 @@
     "name": "WITHDRAWAL_FEE",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "uint8",
         "name": "",
-        "type": "uint256"
+        "type": "uint8"
       }
     ],
     "stateMutability": "view",
@@ -1066,6 +1041,25 @@
     "inputs": [
       {
         "internalType": "address",
+        "name": "distributor",
+        "type": "address"
+      }
+    ],
+    "name": "getUplines",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
         "name": "user",
         "type": "address"
       }
@@ -1149,6 +1143,11 @@
           {
             "internalType": "uint256",
             "name": "amt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fee",
             "type": "uint256"
           },
           {
@@ -1294,11 +1293,6 @@
       {
         "internalType": "address",
         "name": "_AdmnWallt",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_undstrbtdLvlBalAdmn",
         "type": "address"
       },
       {
@@ -1631,6 +1625,21 @@
         "internalType": "uint256",
         "name": "ltgb",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "cummltv25",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "cummltv5",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "rank2per",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -1672,19 +1681,6 @@
     "name": "transferOwnership",
     "outputs": [],
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "undstrbtdLvlBalAdmn",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   },
   {
